@@ -24,6 +24,7 @@ spec:
         app.kubernetes.io/name: {{ template "awx.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      serviceAccount: {{ .Values.serviceaccount }}
       containers:
         - name: web
           image: "{{ .Values.awx_web.image.repository }}:{{ .Values.awx_web.image.tag }}"
