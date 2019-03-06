@@ -4,6 +4,9 @@
 
 replicaCount: 1
 
+# namespace
+namespace: awx
+
 # awx_web & tasks are deployed in the same pod
 awx_web:
   image:
